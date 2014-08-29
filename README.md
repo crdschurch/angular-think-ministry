@@ -44,7 +44,7 @@ Ministry JSON format to a more "standard" JavaScript object.
 
 For example this response from Think Ministry:
 
-```json
+```javascript
 { 
   Data: [ [ 2, 'Female' ], [ 1, 'Male' ] ],
   Fields: [ 
@@ -58,7 +58,7 @@ For example this response from Think Ministry:
 
 Will be converted to this:
 
-```json
+```javascript
 [
   { dpRecordId: 2, dpRecordName: 'Female' },
   { dpRecordId: 1, dpRecordName: 'Male' }
@@ -84,7 +84,7 @@ The thinkMinistry post method handles transforming the request from a
 
 For example this object:
 
-```json
+```javascript
 {
   contactId: 424242,
   firstName: 'Michael',
@@ -94,7 +94,7 @@ For example this object:
 
 Will be converted to the format that Think Ministry expects:
 
-```json
+```javascript
 [
   { Key: 'contact_id', Value: 424242 },
   { Key: 'first_name', Value: 'Michael' },
