@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/crdschurch/angular-think-ministry/issues"
   },
-  "homepage": "https://github.com/crdschurch/angular-think-ministry"
+  "homepage": "https://github.com/crdschurch/angular-think-ministry",
+  "dependencies": {
+    "think-ministry": "0.0.7"
+  }
 }
