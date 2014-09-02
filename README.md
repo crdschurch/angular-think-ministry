@@ -14,10 +14,10 @@ Include the script in your HTML.
 Include and configure the angular module.
 
 ```javascript
-angular.module('yourapp', ['thinkMinistry'])
+angular.module('yourapp', ['ngThinkMinistry'])
 
-angular.module('yourapp').config(function(ThinkMinistry) {
-  ThinkMinistry.baseUrl = 'https://your.think.ministry.host.com/ministryplatformapi/PlatformService.svc'
+angular.module('yourapp').config(function(ThinkMinistryProvider) {
+  ThinkMinistryProvider.baseUrl = '/ministryplatformapi/PlatformService.svc'
 });
 ```
 
@@ -31,9 +31,9 @@ this for you.
 
 ```javascript
 angular.module('yourapp').controller('ContactCtrl', function(thinkMinistry) {
-  thinkMinistry.get('GetPageRecord?pageId=292&recordId=' + contactId).then(function(contact) {
+  thinkMinistry.get('GetPageRecord?pageId=292&recordId=' + contactId).success(function(contact) {
     $scope.contact = contact;
-  }, function(err) {
+  }).error(function(err) {
     $scope.error = err;
   });
 });
@@ -70,9 +70,9 @@ Will be converted to this:
 ```javascript
 angular.module('yourapp').controller('ContactCtrl', function(thinkMinistry) {
   $scope.update = function() {
-    thinkMinistry.post('UpdatePageRecord?pageId=292', function() {
+    thinkMinistry.post('UpdatePageRecord?pageId=292').success(function() {
       console.log('Contact updated successfully');
-    }, function(err) {
+    }).error(function(err) {
       console.log('Error while updating contact ' + err);
     });
   }
