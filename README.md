@@ -8,7 +8,7 @@ Think Ministry platform.
 Include the script in your HTML.
 
 ```html
-<script type="text/javascript" src="angular-think-ministry.js">
+<script type="text/javascript" src="angular-think-ministry.dist.js">
 ```
 
 Include and configure the angular module.

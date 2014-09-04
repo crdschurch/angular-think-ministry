@@ -4,7 +4,8 @@
   "description": "Angular / think-ministry integration",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node_modules/.bin/browserify angular-think-ministry.js > angular-think-ministry.dist.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/crdschurch/angular-think-ministry",
   "dependencies": {
     "think-ministry": "0.0.8"
+  },
+  "devDependencies": {
+    "browserify": "^5.11.0"
   }
 }
