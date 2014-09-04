@@ -1,7 +1,7 @@
 {
   "name": "angular-think-ministry",
   "main": "angular-think-ministry.dist.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/crdschurch/angular-think-ministry",
   "authors": [
     "Michael Guterl <michael@diminishing.org>",
