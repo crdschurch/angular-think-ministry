@@ -1,0 +1,19 @@
+{
+  "name": "angular-think-ministry",
+  "main": "angular-think-ministry.dist.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/crdschurch/angular-think-ministry",
+  "authors": [
+    "Michael Guterl <michael@diminishing.org>",
+    "Jim Anders <github@janders223.com>"
+  ],
+  "description": "Angular / think-ministry integration",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
