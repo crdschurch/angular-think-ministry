@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/crdschurch/angular-think-ministry",
   "dependencies": {
-    "think-ministry": "0.0.7"
+    "think-ministry": "0.0.8"
   }
 }
