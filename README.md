@@ -101,3 +101,60 @@ Will be converted to the format that Think Ministry expects:
   { Key: 'last_name', Value: 'Jordan' }
 ]
 ```
+
+### Resource Factories
+
+**NOTE** This functionality is not yet present, however, I felt it would be
+good to document the direction that we wanted to go in.
+
+Similar to
+[angular-rails-resource](https://github.com/FineLinePrototyping/angularjs-rails-resource)
+we provide a thinkMinistryResourceFactory to ease the creation of services
+related to pages in the Think Ministry platform.
+
+```javascript
+angular.module('yourapp').service('contacts', function(thinkMinistryResourceFactory) {
+  return thinkMinistryResourceFactory({
+    pageId: 292     
+  });
+});
+```
+
+This factory will handle setting up the standard methods exposed by a page in
+the Think Ministry API.
+
+#### Find By Id
+
+```javascript
+angular.module('yourapp').controller('ContactCtrl', function(contacts) {
+  contacts.findById(42).then(function(contact) {
+    $scope.contact = contact;
+  });
+});
+```
+
+#### Find All
+
+```javascript
+contacts.findAll().then(function(contacts) {
+  $scope.contacts = contacts
+});
+```
+
+#### Save / Create / Update
+
+```javascript
+$scope.save = function(contact) {
+  contacts.save(contact);
+}
+```
+
+#### Search
+
+```javascript
+$scope.search = function(keywords) {
+  contacts.query(keywords).then(contacts) {
+    $scope.contacts = contacts;
+  });
+}
+```
