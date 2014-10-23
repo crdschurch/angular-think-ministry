@@ -212,6 +212,7 @@ ngThinkMinistry.factory('thinkMinistry', function(ThinkMinistry, $http, $q) {
   var underbar          = new RegExp( '_', 'g' );
   var space_or_underbar = new RegExp( '[\ _]', 'g' );
   var uppercase         = new RegExp( '([A-Z])', 'g' );
+  var number            = new RegExp( '([1-9])', 'g' );
   var underbar_prefix   = new RegExp( '^_' );
 
   var inflector = {
@@ -443,6 +444,7 @@ ngThinkMinistry.factory('thinkMinistry', function(ThinkMinistry, $http, $q) {
 
       for( ; i < j; i++ ){
         str_path[ i ] = str_path[ i ].replace( uppercase, '_$1' );
+        str_path[ i ] = str_path[ i ].replace( number, '_$1' );
         str_path[ i ] = str_path[ i ].replace( underbar_prefix, '' );
       }
 
