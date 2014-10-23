@@ -412,7 +412,7 @@ ngThinkMinistry.factory('thinkMinistry', function(ThinkMinistry, $http, $q) {
         str_path[ i ] = str_arr.join( '' );
       }
 
-      return str_path.join( '::' );
+      return str_path.join( '__' );
     },
 
 
@@ -437,7 +437,7 @@ ngThinkMinistry.factory('thinkMinistry', function(ThinkMinistry, $http, $q) {
     underscore : function ( str, all_upper_case ){
       if( all_upper_case && str === str.toUpperCase()) return str;
 
-      var str_path = str.split( '::' );
+      var str_path = str.split( '__' );
       var i        = 0;
       var j        = str_path.length;
 
